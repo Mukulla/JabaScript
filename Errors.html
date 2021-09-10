@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(10 + 10 + "10"); // 2010 - Сложение чисел и объединение строки из 20 и 10
+        console.log(10 + "10" + 10); // 101010 - Соединение строк
+        console.log(10 + 10 + +"10"); // 30 - сумма чисел и приведённой строки
+        console.log(10 / -""); // -безконечность - Деление на ноль
+        console.log(10 / +"2,5");// NaN - Деление на строку, котору не получилось привести к числу
+    </script>
+</body>
+</html>
