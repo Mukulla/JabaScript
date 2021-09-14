@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        function Pade(summa = "0"){
+            if(summa < 0){
+                summa = 0;
+            }
+            let first = "Ваша сумма в ";
+            let second = "успешно зачислена.";
+            
+            let last = Number(summa.charAt(summa.length-1));
+            
+            switch(last){
+                case 0:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    alert(first + summa + " рублей " + second);
+                    break;
+                case 1:
+                    alert(first + summa + " рубль " + second);
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    alert(first + summa + " рубля " + second);
+                    break;
+            }
+        }
+
+
+        Pade();
+        Pade("1561");
+        Pade("12");
+        Pade("100");
+        Pade("9845");
+    </script>
+</body>
+</html>
