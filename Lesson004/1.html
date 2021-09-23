@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function prepareValue(someValue){
+            if(!Number.isInteger(someValue)){ someValue = 0}
+            if(someValue < 0 ){someValue = 0}
+            if(someValue > 999){someValue = 999} 
+                        
+            return {
+                units: someValue % 10,
+                tens:  Math.trunc( someValue % 100 / 10 ) ,         
+                hundreds: Math.trunc( someValue / 100 )                
+            }
+        }
+
+        function show(someValue){
+            alert(`Hundreds: ${someValue.hundreds} Tens: ${someValue.tens} Units: ${someValue.units}`)
+        }
+
+        show(prepareValue(+prompt()))
+    </script>    
+</body>
+</html>
